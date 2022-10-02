@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 
 export default function App() {
  //code here 
- const [inputValue, setInputValue] = useState(");
- const [text, setText] = useState(");
+ const [inputValue, setInputValue] = useState("");
+ const [text, setText] = useState("");
  
  const changeInput=(e)=>{
   setInputValue(e.target.value);
@@ -16,7 +16,7 @@ export default function App() {
  const buttonClick=(e)=>{
   e.preventDefault();
   setText(text+inputValue);
-  setInputValue(");
+  setInputValue("");
   }
  
   return (
