@@ -2,27 +2,31 @@
 import '../styles/App.css';
 import React, { useState } from 'react';
 
-const App=()=> {
+export default function App() {
  //code here 
- const [input, setInput] = useState(");
- const [term, setTerm] = useState("):
+ const [inputValue, setInputValue] = useState(");
+ const [text, setText] = useState(");
  
- const handleChange=(e)=>{
-  setInput(e.target.value);
+ const changeInput=(e)=>{
+  setInputValue(e.target.value);
  }
- const handleSubmit=(e)=>{
+ let textCon = document.getElementById("text");
+ 
+ 
+ const buttonClick=(e)=>{
   e.preventDefault();
-  setTerm(term+input);
-  setInput(");
+  setText(text+inputValue);
+  setInputValue(");
   }
  
   return (
  <div>
- <input id="" type="text" value={input} onChange={handleChange} />
-  <button id="" onClick={handleSubmit}>Submit</button>
+ <input id="input" value={inputValue} onChange={changeInput} />
+   <p id="intro">Concated String</p>
+   <p id="text">{text}</P>
+  <button id="button" onClick={buttonClick}>Click me</button>
     <p>{term}</p>
     </div>
   );
 }
 
-export default App;
