@@ -25,7 +25,6 @@ export default function App() {
    <p id="intro">Concated String</p>
    <p id="text">{text}</P>
   <button id="button" onClick={buttonClick}>Click me</button>
-    <p>{term}</p>
     </div>
   );
 }
